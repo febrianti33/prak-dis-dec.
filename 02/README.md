@@ -34,6 +34,8 @@ Bagian ini berfokus pada pembuatan *server* GraphQL menggunakan bahasa pemrogram
   <img width="502" height="48" alt="image" src="https://github.com/user-attachments/assets/64d327c1-4881-4b17-85e2-7c2c9aef4aac" />
 
 - Membuat dan mengaktifkan *virtual environment* di dalam direktori proyek.
+  <img width="1064" height="579" alt="image" src="https://github.com/user-attachments/assets/4ac94032-9044-49f3-a378-c6b166728b48" />
+
 - Menginstal paket `strawberry-graphql` beserta *command-line tools* menggunakan manajer paket `uv`:
   ```bash
   uv pip install 'strawberry-graphql [cli]'
