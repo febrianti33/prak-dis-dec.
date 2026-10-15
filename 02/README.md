@@ -92,6 +92,7 @@ import requests
 
 # URL endpoint GraphQL server
 url = "http://localhost:8000/graphql"
+<img width="1058" height="631" alt="image" src="https://github.com/user-attachments/assets/b4d482b2-97b3-41f3-860d-68aa28391f6f" />
 
 # Query GraphQL untuk mengambil data buku
 query = """
