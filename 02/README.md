@@ -63,6 +63,7 @@ class Query:
         ]
 
 schema = strawberry.Schema(query=Query)
+
 3. Menjalankan Server dan Pengujian via Browser
 Server dijalankan melalui terminal dengan perintah:
 
