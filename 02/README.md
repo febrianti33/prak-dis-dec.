@@ -13,18 +13,17 @@ Universitas: Universitas Teknologi Digital Indonesia (UTDI) Yogyakarta
 I. PENDAHULUAN
 Proses merupakan hasil dari eksekusi program atau aplikasi yang bersifat executable, dikelola oleh sistem operasi, serta terdiri atas executable code, data, resources, dan informasi mengenai state (seperti stack dan heap). Pada satu node tunggal, seluruh pengelolaan proses, alokasi sumber daya, hingga komunikasi antar proses sepenuhnya dikendalikan oleh sistem operasi secara transparan terhadap pengguna.   
 PDF
-+ 1
 
 Sebaliknya, komunikasi antar proses pada sistem terdistribusi melibatkan lebih dari satu node yang tidak berada pada clock yang sama serta tidak memungkinkan penggunaan shared memory demi alasan keamanan. Oleh karena itu, dibutuhkan mekanisme khusus seperti penggunaan arsitektur GraphQL untuk melayani query dari client ke server.   
 PDF
-+ 2
+
 
 II. PRAKTIKUM BAGIAN I: PROSES PADA SATU NODE
 Pada bagian ini, praktikum dilakukan untuk mengamati dan mengelola proses pada sistem operasi:
 
 Menampilkan Proses: Proses yang berjalan pada sistem operasi diamati menggunakan Task Manager (pada Windows) maupun utilitas htop (pada lingkungan Linux/WSL).   
 PDF
-+ 1
+
 
 Memantau Aplikasi: Aplikasi yang sedang aktif dipantau untuk melihat penggunaan sumber daya seperti CPU dan memori secara real-time.
 
