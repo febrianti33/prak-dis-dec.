@@ -44,6 +44,7 @@ Bagian ini berfokus pada pembuatan *server* GraphQL menggunakan bahasa pemrogram
 
   2. Implementasi Schema Server (schema.py)
 File schema dibuat dengan mendefinisikan tipe data menggunakan dekorator @strawberry.type serta kelas Query untuk menangani permintaan data buku:
+<img width="1834" height="600" alt="image" src="https://github.com/user-attachments/assets/1e3c6740-1ad0-431c-8401-d9bd8b57e226" />
 
 Python
 import strawberry
