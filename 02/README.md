@@ -21,6 +21,8 @@ Pada bagian ini, praktikum dilakukan untuk mengamati dan mengelola proses pada s
 1. **Menampilkan Proses:** Proses yang berjalan pada sistem operasi diamati menggunakan Task Manager (pada Windows) maupun utilitas `htop` (pada lingkungan Linux/WSL).   
 2. **Memantau Aplikasi:** Aplikasi yang sedang aktif dipantau untuk melihat penggunaan sumber daya seperti CPU dan memori secara *real-time*.
 3. **Pengelolaan Proses:** Dilakukan uji coba untuk mematikan proses dari aplikasi secara langsung melalui pengelola proses (*process manager*), bukan melalui tombol keluar normal dari aplikasi tersebut.
+   
+<img width="933" height="663" alt="foto1" src="https://github.com/user-attachments/assets/81ce9b82-db94-4528-ad21-9860d244d9d6" />
 
 ---
 
