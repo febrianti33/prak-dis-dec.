@@ -31,10 +31,13 @@ Bagian ini berfokus pada pembuatan *server* GraphQL menggunakan bahasa pemrogram
 
 ### 1. Persiapan Workspace dan Instalasi
 - Membuat *workspace* baru dengan nama `workspace-01` menggunakan versi Python terbaru.
+  <img width="502" height="48" alt="image" src="https://github.com/user-attachments/assets/64d327c1-4881-4b17-85e2-7c2c9aef4aac" />
+
 - Membuat dan mengaktifkan *virtual environment* di dalam direktori proyek.
 - Menginstal paket `strawberry-graphql` beserta *command-line tools* menggunakan manajer paket `uv`:
   ```bash
   uv pip install 'strawberry-graphql [cli]'
+
 
   2. Implementasi Schema Server (schema.py)
 File schema dibuat dengan mendefinisikan tipe data menggunakan dekorator @strawberry.type serta kelas Query untuk menangani permintaan data buku:
