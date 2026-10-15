@@ -102,6 +102,8 @@ query = """
       }
     }
 """
+<img width="1819" height="435" alt="image" src="https://github.com/user-attachments/assets/2c8c30c1-c639-4350-994b-da36af3726ff" />
+
 
 # Mengirimkan HTTP POST request ke server GraphQL
 response = requests.post(url, json={"query": query})
