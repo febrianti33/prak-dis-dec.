@@ -39,6 +39,7 @@ Bagian ini berfokus pada pembuatan *server* GraphQL menggunakan bahasa pemrogram
 - Menginstal paket `strawberry-graphql` beserta *command-line tools* menggunakan manajer paket `uv`:
   ```bash
   uv pip install 'strawberry-graphql [cli]'
+<img width="670" height="84" alt="image" src="https://github.com/user-attachments/assets/76efb928-5467-4d96-b9d3-618897b526b2" />
 
 
   2. Implementasi Schema Server (schema.py)
