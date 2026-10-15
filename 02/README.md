@@ -106,4 +106,5 @@ else:
 
     
 V. KESIMPULAN
+
 Praktikum ini memberikan pemahaman mendalam mengenai perbedaan pengelolaan proses pada sistem node tunggal yang dikendalikan penuh oleh sistem operasi, serta komunikasi antar proses pada sistem terdistribusi yang memerlukan mekanisme khusus seperti GraphQL. Melalui penggunaan Python dan Strawberry, pembuatan server serta integrasinya dengan program client dapat dilakukan secara efisien, terstruktur, dan transparan.
