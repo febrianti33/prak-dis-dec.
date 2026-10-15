@@ -1,50 +1,41 @@
-LAPORAN PRAKTIKUM SISTEM TERDISTRIBUSI DAN TERDESENTRALISASI
-Modul 2: Komunikasi Antar Proses pada Sistem Terdistribusi
-Nama: Maria Widya Febrianti
+# LAPORAN PRAKTIKUM SISTEM TERDISTRIBUSI DAN TERDESENTRALISASI
+## Modul 2: Komunikasi Antar Proses pada Sistem Terdistribusi
 
-NIM: 255410011
+- **Nama:** Maria Widya Febrianti
+- **NIM:** 255410011
+- **Kelas:** IF-1
+- **Program Studi:** Informatika
+- **Universitas:** Universitas Teknologi Digital Indonesia (UTDI) Yogyakarta
 
-Kelas: IF-1
+---
 
-Program Studi: Informatika
+## I. PENDAHULUAN
+Proses merupakan hasil dari eksekusi program atau aplikasi yang bersifat *executable*, dikelola oleh sistem operasi, serta terdiri atas *executable code*, *data*, *resources*, dan informasi mengenai *state* (seperti *stack* dan *heap*). Pada satu node tunggal, seluruh pengelolaan proses, alokasi sumber daya, hingga komunikasi antar proses sepenuhnya dikendalikan oleh sistem operasi secara transparan terhadap pengguna.   
 
-Universitas: Universitas Teknologi Digital Indonesia (UTDI) Yogyakarta
+Sebaliknya, komunikasi antar proses pada sistem terdistribusi melibatkan lebih dari satu node yang tidak berada pada *clock* yang sama serta tidak memungkinkan penggunaan *shared memory* demi alasan keamanan. Oleh karena itu, dibutuhkan mekanisme khusus seperti penggunaan arsitektur **GraphQL** untuk melayani *query* dari *client* ke *server*.
 
-I. PENDAHULUAN
-Proses merupakan hasil dari eksekusi program atau aplikasi yang bersifat executable, dikelola oleh sistem operasi, serta terdiri atas executable code, data, resources, dan informasi mengenai state (seperti stack dan heap). Pada satu node tunggal, seluruh pengelolaan proses, alokasi sumber daya, hingga komunikasi antar proses sepenuhnya dikendalikan oleh sistem operasi secara transparan terhadap pengguna.   
-PDF
+---
 
-Sebaliknya, komunikasi antar proses pada sistem terdistribusi melibatkan lebih dari satu node yang tidak berada pada clock yang sama serta tidak memungkinkan penggunaan shared memory demi alasan keamanan. Oleh karena itu, dibutuhkan mekanisme khusus seperti penggunaan arsitektur GraphQL untuk melayani query dari client ke server.   
-PDF
-
-
-II. PRAKTIKUM BAGIAN I: PROSES PADA SATU NODE
+## II. PRAKTIKUM BAGIAN I: PROSES PADA SATU NODE
 Pada bagian ini, praktikum dilakukan untuk mengamati dan mengelola proses pada sistem operasi:
+1. **Menampilkan Proses:** Proses yang berjalan pada sistem operasi diamati menggunakan Task Manager (pada Windows) maupun utilitas `htop` (pada lingkungan Linux/WSL).   
+2. **Memantau Aplikasi:** Aplikasi yang sedang aktif dipantau untuk melihat penggunaan sumber daya seperti CPU dan memori secara *real-time*.
+3. **Pengelolaan Proses:** Dilakukan uji coba untuk mematikan proses dari aplikasi secara langsung melalui pengelola proses (*process manager*), bukan melalui tombol keluar normal dari aplikasi tersebut.
 
-Menampilkan Proses: Proses yang berjalan pada sistem operasi diamati menggunakan Task Manager (pada Windows) maupun utilitas htop (pada lingkungan Linux/WSL).   
-PDF
+---
 
+## III. PRAKTIKUM BAGIAN II: KOMUNIKASI ANTAR PROSES MENGGUNAKAN GRAPHQL
+Bagian ini berfokus pada pembuatan *server* GraphQL menggunakan bahasa pemrograman Python dengan bantuan pustaka **Strawberry**.   
 
-Memantau Aplikasi: Aplikasi yang sedang aktif dipantau untuk melihat penggunaan sumber daya seperti CPU dan memori secara real-time.
+### 1. Persiapan Workspace dan Instalasi
+- Membuat *workspace* baru dengan nama `workspace-01` menggunakan versi Python terbaru.
+- Membuat dan mengaktifkan *virtual environment* di dalam direktori proyek.
+- Menginstal paket `strawberry-graphql` beserta *command-line tools* menggunakan manajer paket `uv`:
+  ```bash
+  uv pip install 'strawberry-graphql [cli]'
 
-Pengelolaan Proses: Dilakukan uji coba untuk mematikan proses dari aplikasi secara langsung melalui pengelola proses (process manager), bukan melalui tombol keluar normal dari aplikasi tersebut.
-
-III. PRAKTIKUM BAGIAN II: KOMUNIKASI ANTAR PROSES MENGGUNAKAN GRAPHQL
-Bagian ini berfokus pada pembuatan server GraphQL menggunakan bahasa pemrograman Python dengan bantuan pustaka Strawberry.   
-PDF
-
-1. Persiapan Workspace dan Instalasi
-Membuat workspace baru dengan nama workspace-01 menggunakan versi Python terbaru.
-
-Membuat dan mengaktifkan virtual environment di dalam direktori proyek.
-
-Menginstal paket strawberry-graphql beserta command-line tools menggunakan manajer paket uv:
-
-Bash
-uv pip install 'strawberry-graphql [cli]'
-2. Implementasi Schema Server (schema.py)
-File schema dibuat dengan mendefinisikan tipe data menggunakan dekorator @strawberry.type serta kelas Query untuk menangani permintaan data buku:   
-PDF
+  2. Implementasi Schema Server (schema.py)
+File schema dibuat dengan mendefinisikan tipe data menggunakan dekorator @strawberry.type serta kelas Query untuk menangani permintaan data buku:
 
 Python
 import strawberry
@@ -112,6 +103,7 @@ if response.status_code == 200:
     print(result)
 else:
     print(f"Gagal terhubung. Status code: {response.status_code}")
+
     
 V. KESIMPULAN
 Praktikum ini memberikan pemahaman mendalam mengenai perbedaan pengelolaan proses pada sistem node tunggal yang dikendalikan penuh oleh sistem operasi, serta komunikasi antar proses pada sistem terdistribusi yang memerlukan mekanisme khusus seperti GraphQL. Melalui penggunaan Python dan Strawberry, pembuatan server serta integrasinya dengan program client dapat dilakukan secara efisien, terstruktur, dan transparan.
