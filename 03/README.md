@@ -15,10 +15,12 @@ PROGRAM STUDI INFORMATIKA
 UNIVERSITAS TEKNOLOGI DIGITAL INDONESIA
 2026
 ---
+
 BAB I PENDAHULUAN
 
 1.1 Latar Belakang
 Sistem terdistribusi terdiri dari beberapa komputer atau proses yang berkomunikasi melalui jaringan. Setiap proses dapat berjalan pada waktu dan urutan yang berbeda sehingga dibutuhkan mekanisme sinkronisasi. Sinkronisasi membantu mengatur urutan kejadian, melindungi data bersama, mencegah proses saling menunggu, dan mengoordinasikan node.
+
 1.2 Tujuan Praktikum
 - Memahami sinkronisasi waktu menggunakan NTP.
 - Memahami Vector Clock untuk mencatat urutan kejadian.
@@ -27,24 +29,32 @@ Sistem terdistribusi terdiri dari beberapa komputer atau proses yang berkomunika
 - Memahami penyebab deadlock dan cara menghindarinya.
 - Memahami pemilihan leader menggunakan algoritma Raft.
   ---
+  
 BAB II DASAR TEORI
 2.1 Sinkronisasi Waktu
 Sinkronisasi waktu adalah proses menyesuaikan waktu komputer dengan sumber waktu acuan. NTP (Network Time Protocol) digunakan untuk membantu menyelaraskan waktu perangkat. Modul juga menyebut PTP (Precision Time Protocol) sebagai protokol sinkronisasi waktu.
+
 2.2 Vector Clock
 Vector Clock mencatat kejadian dengan vektor bilangan. Kejadian lokal menaikkan komponen proses yang bersangkutan. Saat pesan diterima, proses membandingkan vektor lokal dan vektor pesan, mengambil nilai maksimum setiap komponen, lalu menaikkan komponen penerima.
 2.3 Race Condition
 Race condition terjadi ketika hasil program bergantung pada urutan beberapa thread yang mengakses data bersama. Tanpa perlindungan, pembaruan dari satu thread dapat tertimpa thread lain. Lock dapat melindungi bagian kritis agar hanya satu thread menjalankannya pada satu waktu.
+
 2.4 Deadlock
 Deadlock adalah kondisi ketika thread saling menunggu sumber daya yang dikunci thread lain sehingga tidak dapat melanjutkan pekerjaan. Pengambilan lock dengan urutan konsisten merupakan salah satu cara mengurangi risiko deadlock.
+
 2.5 Algoritma Raft
 Raft merupakan algoritma konsensus yang menggunakan peran follower, candidate, dan leader. Candidate meminta suara dari node lain dan dapat menjadi leader apabila memperoleh suara mayoritas pada term yang sesuai.
+
 BAB III PELAKSANAAN DAN PEMBAHASAN
 3.1 Sinkronisasi Waktu
 Pada Windows, modul mengarahkan praktikan menggunakan aplikasi NetTime untuk menyinkronkan waktu dengan server NTP. Langkahnya adalah mengunduh aplikasi dari situs resminya, memasang dan menjalankan aplikasi, memeriksa server NTP, kemudian menjalankan pembaruan waktu. Setelah itu, status sinkronisasi diamati.
 
 Pembahasan: NetTime membantu komputer menyesuaikan waktu lokal dengan waktu server NTP. Sinkronisasi diperlukan karena komputer dalam sistem terdistribusi dapat memiliki perbedaan waktu. Waktu yang lebih seragam membantu pencatatan aktivitas dan analisis log. Hasil sebenarnya harus dibuktikan dengan screenshot aplikasi setelah sinkronisasi.
 
-Bukti praktikum: [Tempelkan screenshot NetTime setelah sinkronisasi.]
+Bukti praktikum: 
+<img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/19380d9b-859e-479b-b0da-4b2a9752b840" />
+
+
 3.2 Vector Clock
 Pada bagian ini dibuat modul Python sederhana untuk menaikkan jam lokal, mengirim vector clock, dan menerima pesan.
 Kode vector_clock.py
