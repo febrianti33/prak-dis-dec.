@@ -58,7 +58,7 @@ BAB III PELAKSANAAN DAN PEMBAHASAN
 
 3.1 Sinkronisasi Waktu
 Pada Windows, modul mengarahkan praktikan menggunakan aplikasi NetTime untuk menyinkronkan waktu dengan server NTP. Langkahnya adalah mengunduh aplikasi dari situs resminya, memasang dan menjalankan aplikasi, memeriksa server NTP, kemudian menjalankan pembaruan waktu. Setelah itu, status sinkronisasi diamati.
-<img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/8c2d7c2d-1b09-46f5-9830-0ca1659269e4" />
+<img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/8c2d7c2d-1b09-46f5-9830-0ca1659269e4" /
 
 Pembahasan: NetTime membantu komputer menyesuaikan waktu lokal dengan waktu server NTP. Sinkronisasi diperlukan karena komputer dalam sistem terdistribusi dapat memiliki perbedaan waktu. Waktu yang lebih seragam membantu pencatatan aktivitas dan analisis log. Hasil sebenarnya harus dibuktikan dengan screenshot aplikasi setelah sinkronisasi.
 
@@ -89,7 +89,12 @@ class VectorClock:
 
 Pembahasan: Ketika P1 menjalankan kejadian lokal, komponen pertama bertambah menjadi satu. Fungsi send_event menaikkan komponen P1 sekali lagi dan mengirim salinan vektor [2, 0, 0]. Ketika P2 menerima pesan, setiap komponen dibandingkan dan diambil nilai terbesarnya, lalu komponen P2 dinaikkan sehingga hasilnya [2, 1, 0]. P3 menjalankan kejadian lokal sendiri dan menghasilkan [0, 0, 1]. Perhitungan manual mengikuti langkah yang sama: menaikkan komponen proses, mengambil nilai maksimum saat menerima pesan, lalu menaikkan komponen penerima.
 
-Bukti praktikum: <img width="868" height="363" alt="gambar2d" src="https://github.com/user-attachments/assets/b8d1d140-5e87-4421-b9fa-f61833ad3c10" />
+Bukti praktikum:<img width="934" height="872" alt="gambar2a" src="https://github.com/user-attachments/assets/55e83c44-4f2b-4770-9c78-0892d125d64c" /> <img width="949" height="833" alt="gambar2b" src="https://github.com/user-attachments/assets/f0b8806b-8fdf-4c3f-a48a-43fd9f717a8c" /> <img width="979" height="453" alt="gambar2c" src="https://github.com/user-attachments/assets/2dde30b7-f103-40b6-8d5e-257a7afc371c" /> <img width="868" height="363" alt="gambar2d" src="https://github.com/user-attachments/assets/d6ca60dc-580d-4494-ae33-57b760241cf2" />
+
+
+
+
+
 
 
 3.3 Problem Tanpa Sinkronisasi
