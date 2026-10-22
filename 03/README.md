@@ -89,7 +89,9 @@ class VectorClock:
 
 Pembahasan: Ketika P1 menjalankan kejadian lokal, komponen pertama bertambah menjadi satu. Fungsi send_event menaikkan komponen P1 sekali lagi dan mengirim salinan vektor [2, 0, 0]. Ketika P2 menerima pesan, setiap komponen dibandingkan dan diambil nilai terbesarnya, lalu komponen P2 dinaikkan sehingga hasilnya [2, 1, 0]. P3 menjalankan kejadian lokal sendiri dan menghasilkan [0, 0, 1]. Perhitungan manual mengikuti langkah yang sama: menaikkan komponen proses, mengambil nilai maksimum saat menerima pesan, lalu menaikkan komponen penerima.
 
-Bukti praktikum: [Tempelkan screenshot hasil program. Jalankan juga vclocks.py asli apabila dosen meminta keluaran file tersebut.]
+Bukti praktikum: <img width="868" height="363" alt="gambar2d" src="https://github.com/user-attachments/assets/b8d1d140-5e87-4421-b9fa-f61833ad3c10" />
+
+
 3.3 Problem Tanpa Sinkronisasi
 Thread berjalan secara konkuren sehingga urutan pesan mulai dan selesai dapat berbeda pada setiap eksekusi. Penjadwalan sistem operasi dan waktu yang dibutuhkan setiap thread memengaruhi urutan keluaran.
 Contoh program multithreaded-example.py
