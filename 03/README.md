@@ -121,7 +121,9 @@ for t in threads:
 
 Pembahasan: Keluaran tersebut hanya salah satu kemungkinan. Karena waktu jeda setiap thread berbeda dan dipilih secara acak, thread yang mulai lebih dahulu belum tentu selesai lebih dahulu. Perintah join membuat program utama menunggu sampai semua thread selesai. Jalankan program beberapa kali dan lampirkan screenshot dari dua hasil yang berbeda.
 
-Bukti praktikum: [Tempelkan screenshot dua percobaan.]
+Bukti praktikum: <img width="1128" height="771" alt="gambar3" src="https://github.com/user-attachments/assets/546314cc-849a-4a95-af79-978d09d713a3" /> <img width="713" height="303" alt="gambar3a" src="https://github.com/user-attachments/assets/86ff4054-8cb6-4060-81ea-7c71a6b466a5" />
+
+
 3.3.1 Data Race / Race Conditions
 Program race-conditions-01.py
 import threading
@@ -166,7 +168,14 @@ print("Saldo akhir:", saldo)
 print("Saldo yang diharapkan:", 200000)
 Pembahasan: Program perbaikan menggunakan threading.Lock untuk melindungi bagian kritis. Blok with kunci hanya dapat dijalankan satu thread pada satu waktu. Thread lain menunggu sampai kunci dilepaskan. Dengan demikian, proses pembaruan saldo tidak saling menimpa dan hasil yang diharapkan adalah 200000.
 
-Bukti praktikum: [Tempelkan screenshot hasil sebelum dan sesudah penggunaan lock.]
+Bukti praktikum: <img width="1152" height="473" alt="gambar4a" src="https://github.com/user-attachments/assets/4e0b6a38-3a9b-490e-b18e-a4687be21790" /> <img width="624" height="101" alt="gambar4b" src="https://github.com/user-attachments/assets/5a51ee55-f66f-4552-bbba-a786e687fba6" />
+
+
+<img width="1116" height="541" alt="gambar5a" src="https://github.com/user-attachments/assets/88010e36-2a91-405a-b4a3-aba773d2afae" /> <img width="609" height="62" alt="gambar5b" src="https://github.com/user-attachments/assets/f690342f-4a8b-45bf-8143-a1ce438f0d50" />
+
+
+
+
 
 
 3.3.2 Deadlock
@@ -221,7 +230,18 @@ t1.join(); t2.join()
 print("Program selesai")
 Pembahasan: Semua thread mengambil lock A terlebih dahulu, lalu lock B. Urutan pengambilan yang konsisten mencegah siklus saling menunggu seperti contoh sebelumnya. Thread yang belum memperoleh lock A menunggu sebelum memegang lock apa pun, sehingga thread yang sedang bekerja dapat menyelesaikan tugas dan melepaskan lock.
 
-Bukti praktikum: [Tempelkan screenshot hasil deadlock-02.py.]
+Bukti praktikum: <img width="1116" height="722" alt="gambar6" src="https://github.com/user-attachments/assets/cfe6c4bb-1166-4cca-a5aa-1780955c66bb" /> <img width="634" height="135" alt="gambar 6a" src="https://github.com/user-attachments/assets/32998739-8c4a-4e0c-96df-e5014b2c6734" />
+
+
+<img width="1114" height="862" alt="gambar7" src="https://github.com/user-attachments/assets/8e458a58-bdf7-4511-af11-1726621941a8" /> <img width="1155" height="219" alt="gambar7a" src="https://github.com/user-attachments/assets/892bae0c-363a-4694-8450-1b137c073063" /> <img width="1050" height="212" alt="gambar7b" src="https://github.com/user-attachments/assets/99887512-4c67-4c0a-aac3-2a39e6071bfa" />
+
+
+
+
+
+
+
+
 
 
 3.4 Algoritma Raft
@@ -273,7 +293,13 @@ Pembahasan: Node 2 memperoleh dua suara dari tiga node. Karena dua merupakan sua
 
 Visualisasi manual: Gambarkan tiga node. Node 2 sebagai candidate meminta suara dari Node 1 dan Node 3. Setelah memperoleh mayoritas, Node 2 menjadi leader, sedangkan Node 1 dan Node 3 menjadi follower.
 
-Bukti praktikum: [Tempelkan screenshot raft.py asli dan simulasi modul yang dibuat.]
+Bukti praktikum: <img width="1132" height="817" alt="gambar8" src="https://github.com/user-attachments/assets/c7f19a0a-28c6-47e8-8cca-ffd209f85133" /> <img width="1120" height="833" alt="gambar8a" src="https://github.com/user-attachments/assets/299d16ef-3434-40a1-af46-af218a79a966" /> <img width="1139" height="839" alt="gambar8b" src="https://github.com/user-attachments/assets/4ee3ba89-3a60-4962-8f73-8bfd213307b0" /> <img width="1130" height="791" alt="gambar8c" src="https://github.com/user-attachments/assets/0fe1d63c-4f6f-455d-96c8-a0ce003a23a9" /> <img width="1135" height="797" alt="gambar8d" src="https://github.com/user-attachments/assets/c10aa6f9-375d-4b58-be3f-d8c347fa2390" /> <img width="1131" height="816" alt="gambar8e" src="https://github.com/user-attachments/assets/b6febfeb-4d4b-4ad9-bdb4-e487486bca51" />
+
+
+
+
+
+
 
 BAB IV PENUTUP
 
