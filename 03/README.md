@@ -31,21 +31,31 @@ Sistem terdistribusi terdiri dari beberapa komputer atau proses yang berkomunika
   ---
   
 BAB II DASAR TEORI
+
+
 2.1 Sinkronisasi Waktu
 Sinkronisasi waktu adalah proses menyesuaikan waktu komputer dengan sumber waktu acuan. NTP (Network Time Protocol) digunakan untuk membantu menyelaraskan waktu perangkat. Modul juga menyebut PTP (Precision Time Protocol) sebagai protokol sinkronisasi waktu.
 
+
 2.2 Vector Clock
 Vector Clock mencatat kejadian dengan vektor bilangan. Kejadian lokal menaikkan komponen proses yang bersangkutan. Saat pesan diterima, proses membandingkan vektor lokal dan vektor pesan, mengambil nilai maksimum setiap komponen, lalu menaikkan komponen penerima.
+
+
 2.3 Race Condition
 Race condition terjadi ketika hasil program bergantung pada urutan beberapa thread yang mengakses data bersama. Tanpa perlindungan, pembaruan dari satu thread dapat tertimpa thread lain. Lock dapat melindungi bagian kritis agar hanya satu thread menjalankannya pada satu waktu.
+
 
 2.4 Deadlock
 Deadlock adalah kondisi ketika thread saling menunggu sumber daya yang dikunci thread lain sehingga tidak dapat melanjutkan pekerjaan. Pengambilan lock dengan urutan konsisten merupakan salah satu cara mengurangi risiko deadlock.
 
+
 2.5 Algoritma Raft
 Raft merupakan algoritma konsensus yang menggunakan peran follower, candidate, dan leader. Candidate meminta suara dari node lain dan dapat menjadi leader apabila memperoleh suara mayoritas pada term yang sesuai.
 
+
 BAB III PELAKSANAAN DAN PEMBAHASAN
+
+
 3.1 Sinkronisasi Waktu
 Pada Windows, modul mengarahkan praktikan menggunakan aplikasi NetTime untuk menyinkronkan waktu dengan server NTP. Langkahnya adalah mengunduh aplikasi dari situs resminya, memasang dan menjalankan aplikasi, memeriksa server NTP, kemudian menjalankan pembaruan waktu. Setelah itu, status sinkronisasi diamati.
 <img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/8c2d7c2d-1b09-46f5-9830-0ca1659269e4" />
@@ -75,26 +85,8 @@ class VectorClock:
 
     def __str__(self):
         return str(self.clock)
-Kode main.py
-from vector_clock import VectorClock
 
-p1 = VectorClock(3)
-p2 = VectorClock(3)
-p3 = VectorClock(3)
 
-p1.increment(0)
-print("P1 setelah event:", p1)
-pesan = p1.send_event(0)
-print("Pesan dari P1:", pesan)
-p2.receive_event(1, pesan)
-print("P2 setelah menerima pesan:", p2)
-p3.increment(2)
-print("P3 setelah event sendiri:", p3)
-Contoh keluaran
-P1 setelah event: [1, 0, 0]
-Pesan dari P1: [2, 0, 0]
-P2 setelah menerima pesan: [2, 1, 0]
-P3 setelah event sendiri: [0, 0, 1]
 Pembahasan: Ketika P1 menjalankan kejadian lokal, komponen pertama bertambah menjadi satu. Fungsi send_event menaikkan komponen P1 sekali lagi dan mengirim salinan vektor [2, 0, 0]. Ketika P2 menerima pesan, setiap komponen dibandingkan dan diambil nilai terbesarnya, lalu komponen P2 dinaikkan sehingga hasilnya [2, 1, 0]. P3 menjalankan kejadian lokal sendiri dan menghasilkan [0, 0, 1]. Perhitungan manual mengikuti langkah yang sama: menaikkan komponen proses, mengambil nilai maksimum saat menerima pesan, lalu menaikkan komponen penerima.
 
 Bukti praktikum: [Tempelkan screenshot hasil program. Jalankan juga vclocks.py asli apabila dosen meminta keluaran file tersebut.]
@@ -119,15 +111,7 @@ for i in range(1, 4):
 
 for t in threads:
     t.join()
-print("Semua tugas selesai.")
-Contoh keluaran
-Thread 1 mulai
-Thread 2 mulai
-Thread 3 mulai
-Thread 2 selesai
-Thread 3 selesai
-Thread 1 selesai
-Semua tugas selesai.
+
 Pembahasan: Keluaran tersebut hanya salah satu kemungkinan. Karena waktu jeda setiap thread berbeda dan dipilih secara acak, thread yang mulai lebih dahulu belum tentu selesai lebih dahulu. Perintah join membuat program utama menunggu sampai semua thread selesai. Jalankan program beberapa kali dan lampirkan screenshot dari dua hasil yang berbeda.
 
 Bukti praktikum: [Tempelkan screenshot dua percobaan.]
@@ -176,6 +160,8 @@ print("Saldo yang diharapkan:", 200000)
 Pembahasan: Program perbaikan menggunakan threading.Lock untuk melindungi bagian kritis. Blok with kunci hanya dapat dijalankan satu thread pada satu waktu. Thread lain menunggu sampai kunci dilepaskan. Dengan demikian, proses pembaruan saldo tidak saling menimpa dan hasil yang diharapkan adalah 200000.
 
 Bukti praktikum: [Tempelkan screenshot hasil sebelum dan sesudah penggunaan lock.]
+
+
 3.3.2 Deadlock
 Program deadlock-01.py
 import threading
@@ -229,6 +215,8 @@ print("Program selesai")
 Pembahasan: Semua thread mengambil lock A terlebih dahulu, lalu lock B. Urutan pengambilan yang konsisten mencegah siklus saling menunggu seperti contoh sebelumnya. Thread yang belum memperoleh lock A menunggu sebelum memegang lock apa pun, sehingga thread yang sedang bekerja dapat menyelesaikan tugas dan melepaskan lock.
 
 Bukti praktikum: [Tempelkan screenshot hasil deadlock-02.py.]
+
+
 3.4 Algoritma Raft
 Raft merupakan algoritma konsensus untuk membantu node mencapai kesepakatan. Pada pemilihan leader, sebuah node menjadi candidate dan meminta suara. Jika memperoleh mayoritas suara pada term yang sesuai, candidate dapat menjadi leader. Untuk tiga node, mayoritas berarti dua suara.
 Kode raft_module.py (simulasi konsep)
@@ -281,8 +269,11 @@ Visualisasi manual: Gambarkan tiga node. Node 2 sebagai candidate meminta suara 
 Bukti praktikum: [Tempelkan screenshot raft.py asli dan simulasi modul yang dibuat.]
 
 BAB IV PENUTUP
+
+
 4.1 Kesimpulan
 Berdasarkan praktikum Modul 3, saya memahami bahwa sinkronisasi penting dalam sistem terdistribusi. Sinkronisasi waktu membantu menyelaraskan jam perangkat, sedangkan Vector Clock mencatat hubungan urutan kejadian pada beberapa proses. Dalam multithreading, urutan keluaran dapat berbeda karena thread berjalan secara konkuren. Race condition terjadi saat beberapa thread mengubah data bersama tanpa perlindungan, sedangkan deadlock muncul ketika thread saling menunggu lock. Penggunaan lock dan urutan penguncian yang konsisten dapat membantu mengatasi masalah tersebut. Saya juga mempelajari prinsip pemilihan leader pada Raft, yaitu kandidat perlu memperoleh suara mayoritas.
+
 
 4.2 Saran
 Setiap program sebaiknya dijalankan langsung dan diamati lebih dari satu kali, terutama program multithreading. Screenshot hasil aktual perlu disimpan sebagai bukti praktikum. Program contoh untuk memahami konsep juga perlu dibedakan dari program asli pada modul agar laporan sesuai dengan tugas yang diberikan.
