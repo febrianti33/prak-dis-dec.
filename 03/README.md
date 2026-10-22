@@ -14,7 +14,9 @@ Kelas: IF-1
 PROGRAM STUDI INFORMATIKA
 UNIVERSITAS TEKNOLOGI DIGITAL INDONESIA
 2026
+---
 BAB I PENDAHULUAN
+
 1.1 Latar Belakang
 Sistem terdistribusi terdiri dari beberapa komputer atau proses yang berkomunikasi melalui jaringan. Setiap proses dapat berjalan pada waktu dan urutan yang berbeda sehingga dibutuhkan mekanisme sinkronisasi. Sinkronisasi membantu mengatur urutan kejadian, melindungi data bersama, mencegah proses saling menunggu, dan mengoordinasikan node.
 1.2 Tujuan Praktikum
@@ -24,6 +26,7 @@ Sistem terdistribusi terdiri dari beberapa komputer atau proses yang berkomunika
 - Memahami race condition dan penggunaan lock.
 - Memahami penyebab deadlock dan cara menghindarinya.
 - Memahami pemilihan leader menggunakan algoritma Raft.
+  ---
 BAB II DASAR TEORI
 2.1 Sinkronisasi Waktu
 Sinkronisasi waktu adalah proses menyesuaikan waktu komputer dengan sumber waktu acuan. NTP (Network Time Protocol) digunakan untuk membantu menyelaraskan waktu perangkat. Modul juga menyebut PTP (Precision Time Protocol) sebagai protokol sinkronisasi waktu.
@@ -267,9 +270,11 @@ Pembahasan: Node 2 memperoleh dua suara dari tiga node. Karena dua merupakan sua
 Visualisasi manual: Gambarkan tiga node. Node 2 sebagai candidate meminta suara dari Node 1 dan Node 3. Setelah memperoleh mayoritas, Node 2 menjadi leader, sedangkan Node 1 dan Node 3 menjadi follower.
 
 Bukti praktikum: [Tempelkan screenshot raft.py asli dan simulasi modul yang dibuat.]
+
 BAB IV PENUTUP
 4.1 Kesimpulan
 Berdasarkan praktikum Modul 3, saya memahami bahwa sinkronisasi penting dalam sistem terdistribusi. Sinkronisasi waktu membantu menyelaraskan jam perangkat, sedangkan Vector Clock mencatat hubungan urutan kejadian pada beberapa proses. Dalam multithreading, urutan keluaran dapat berbeda karena thread berjalan secara konkuren. Race condition terjadi saat beberapa thread mengubah data bersama tanpa perlindungan, sedangkan deadlock muncul ketika thread saling menunggu lock. Penggunaan lock dan urutan penguncian yang konsisten dapat membantu mengatasi masalah tersebut. Saya juga mempelajari prinsip pemilihan leader pada Raft, yaitu kandidat perlu memperoleh suara mayoritas.
+
 4.2 Saran
 Setiap program sebaiknya dijalankan langsung dan diamati lebih dari satu kali, terutama program multithreading. Screenshot hasil aktual perlu disimpan sebagai bukti praktikum. Program contoh untuk memahami konsep juga perlu dibedakan dari program asli pada modul agar laporan sesuai dengan tugas yang diberikan.
 DAFTAR PUSTAKA
