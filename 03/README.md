@@ -53,7 +53,7 @@ Pembahasan: NetTime membantu komputer menyesuaikan waktu lokal dengan waktu serv
 
 
 <img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/19380d9b-859e-479b-b0da-4b2a9752b840" />
-
+---
 
 
 3.2 Vector Clock
