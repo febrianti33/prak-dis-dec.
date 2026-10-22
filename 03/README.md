@@ -48,12 +48,10 @@ Raft merupakan algoritma konsensus yang menggunakan peran follower, candidate, d
 BAB III PELAKSANAAN DAN PEMBAHASAN
 3.1 Sinkronisasi Waktu
 Pada Windows, modul mengarahkan praktikan menggunakan aplikasi NetTime untuk menyinkronkan waktu dengan server NTP. Langkahnya adalah mengunduh aplikasi dari situs resminya, memasang dan menjalankan aplikasi, memeriksa server NTP, kemudian menjalankan pembaruan waktu. Setelah itu, status sinkronisasi diamati.
+<img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/8c2d7c2d-1b09-46f5-9830-0ca1659269e4" />
 
 Pembahasan: NetTime membantu komputer menyesuaikan waktu lokal dengan waktu server NTP. Sinkronisasi diperlukan karena komputer dalam sistem terdistribusi dapat memiliki perbedaan waktu. Waktu yang lebih seragam membantu pencatatan aktivitas dan analisis log. Hasil sebenarnya harus dibuktikan dengan screenshot aplikasi setelah sinkronisasi.
 
-
-<img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/19380d9b-859e-479b-b0da-4b2a9752b840" />
----
 
 
 3.2 Vector Clock
