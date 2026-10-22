@@ -51,7 +51,7 @@ Pada Windows, modul mengarahkan praktikan menggunakan aplikasi NetTime untuk men
 
 Pembahasan: NetTime membantu komputer menyesuaikan waktu lokal dengan waktu server NTP. Sinkronisasi diperlukan karena komputer dalam sistem terdistribusi dapat memiliki perbedaan waktu. Waktu yang lebih seragam membantu pencatatan aktivitas dan analisis log. Hasil sebenarnya harus dibuktikan dengan screenshot aplikasi setelah sinkronisasi.
 
-Bukti praktikum: 
+
 <img width="634" height="460" alt="image" src="https://github.com/user-attachments/assets/19380d9b-859e-479b-b0da-4b2a9752b840" />
 
 
