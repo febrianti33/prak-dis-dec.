@@ -2,16 +2,12 @@
 ---
 
 
-| **Nama** | Maria Widya Febrianti |
-| **NIM** | 255410011 |
-| **Kelas** | IF-1 |
-| **Program Studi** | Informatika (Undergraduate Student) |
-| **Institusi** | Universitas Teknologi Digital Indonesia (UTDI) |
+ **Nama** :Maria Widya Febrianti 
+**NIM** : 255410011 
+**Kelas** : IF-1 
+**Program Studi** : Informatika (Undergraduate Student) 
+**Institusi** : Universitas Teknologi Digital Indonesia (UTDI) 
 
-
-# 🚀 BlackSheep API with Docker & Nginx Load Balancer
-
-Dokumentasi ini berisi panduan alur kerja lengkap dalam membangun, menguji, dan melakukan containerisasi aplikasi **BlackSheep API** (Python) menggunakan **uv**, **Docker**, serta **Nginx** sebagai *reverse proxy* dan *load balancer*.
 
 ---
 
