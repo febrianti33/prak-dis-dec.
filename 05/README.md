@@ -44,7 +44,7 @@ Langkah awal dimulai dengan pembaharuan indeks repository sistem dan penyiapan d
 sudo apt update
 sudo apt upgrade -y
 
-![Update dan Upgrade Paket Sistem](path/to/gambar-1.png)
+<img width="940" height="444" alt="image" src="https://github.com/user-attachments/assets/3ff5bd4e-ce9b-4cb6-b33c-fd6e054d1616" />
 *Gambar 1: Pembaruan indeks paket repository dan upgrade sistem Linux Ubuntu.*
 
 **Penjelasan Gambar 1:**
@@ -54,7 +54,7 @@ Selanjutnya, dilakukan instalasi dependensi utama untuk mendukung pengembangan a
 
 sudo apt install python3 python3-pip python3-venv curl git build-essential -y
 
-![Instalasi Dependensi Dasar](path/to/gambar-2.png)
+<img width="940" height="449" alt="image" src="https://github.com/user-attachments/assets/c55c7e62-c1ff-47bb-a754-703fdfdf1803" />
 *Gambar 2: Proses instalasi paket python3, python3-pip, python3-venv, curl, git, dan build-essential.*
 
 **Penjelasan Gambar 2:**
@@ -64,7 +64,7 @@ Memeriksa versi Python yang terpasang pada sistem:
 
 python3 --version
 
-![Pemeriksaan Versi Python](path/to/gambar-3.png)
+<img width="940" height="118" alt="image" src="https://github.com/user-attachments/assets/1d9f56ae-3162-4f9c-8528-7ebf80af11ba" />
 *Gambar 3: Verifikasi versi Python 3.14.4 yang terpasang di sistem.*
 
 **Penjelasan Gambar 3:**
@@ -76,7 +76,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
 uv --version
 
-![Instalasi Tool UV](path/to/gambar-4.png)
+<img width="940" height="109" alt="image" src="https://github.com/user-attachments/assets/02ec39e0-0640-4219-bea5-30380b17253c" />
 *Gambar 4: Mengunduh dan mengonfigurasi manajer paket uv versi 0.13.7.*
 
 **Penjelasan Gambar 4:**
@@ -86,7 +86,7 @@ Menginstal Docker Engine dan Docker Compose plugin untuk kebutuhan kontainerisas
 
 sudo apt install docker.io docker-compose-v2 -y
 
-![Instalasi Docker Engine](path/to/gambar-5.png)
+<img width="940" height="454" alt="image" src="https://github.com/user-attachments/assets/0c0f1add-b7ff-48c7-bb06-66011b58b2bf" />
 *Gambar 5: Instalasi layanan docker.io dan plugin docker-compose-v2.*
 
 **Penjelasan Gambar 5:**
@@ -98,7 +98,7 @@ sudo systemctl enable --now docker
 sudo docker --version
 sudo docker compose version
 
-![Aktivasi Layanan Docker](path/to/gambar-6.png)
+<img width="940" height="64" alt="image" src="https://github.com/user-attachments/assets/91917a67-ef52-4b3b-a3c2-0167cdd01369" />
 *Gambar 6: Memulai layanan Docker daemon serta mengecek versi Docker (29.1.3) dan Docker Compose (2.40.3).*
 
 **Penjelasan Gambar 6:**
@@ -109,7 +109,7 @@ Membuat direktori kerja `workspace-05` untuk menampung seluruh file proyek prakt
 mkdir workspace-05
 cd workspace-05
 
-![Pembuatan Direktori Workspace](path/to/gambar-7.png)
+<img width="940" height="28" alt="image" src="https://github.com/user-attachments/assets/ad31b427-884d-4e67-89c3-dc6f538c9b17" />
 *Gambar 7: Membuat dan berpindah ke direktori proyek workspace-05.*
 
 **Penjelasan Gambar 7:**
@@ -121,7 +121,7 @@ uv python install 3.14.4
 uv venv
 source .venv/bin/activate
 
-![Pembuatan Virtual Environment](path/to/gambar-8.png)
+<img width="940" height="115" alt="image" src="https://github.com/user-attachments/assets/caa10e70-0fcc-4061-a9bd-fd638ea8e505" />
 *Gambar 8: Mengisolasi versi Python 3.14.4 dan membuat lingkungan virtual .venv.*
 
 **Penjelasan Gambar 8:**
@@ -132,7 +132,7 @@ Menginstal framework web BlackSheep dan CLI pendukungnya menggunakan `uv pip`:
 uv pip install blacksheep
 uv pip install blacksheep-cli
 
-![Instalasi BlackSheep Framework](path/to/gambar-9.png)
+<img width="940" height="440" alt="image" src="https://github.com/user-attachments/assets/17b76dad-0e8b-4b08-a804-0158b62f3efe" />
 *Gambar 9: Instalasi paket blacksheep dan blacksheep-cli ke dalam virtual environment.*
 
 **Penjelasan Gambar 9:**
@@ -153,7 +153,7 @@ blacksheep create
 - **Library to read settings**: `essentials-configuration`
 - **App settings format**: `YAML`
 
-![Inisialisasi Proyek BlackSheep](path/to/gambar-10.png)
+<img width="940" height="290" alt="image" src="https://github.com/user-attachments/assets/682772d3-1d62-4a28-8eba-ece580f78a9a" />
 *Gambar 10: Inisialisasi struktur proyek blacksheep_lb berbasis template API via CLI.*
 
 **Penjelasan Gambar 10:**
@@ -164,7 +164,7 @@ Masuk ke direktori proyek dan menginstal seluruh dependensi dari file `requireme
 cd blacksheep_lb
 uv pip install -r requirements.txt
 
-![Instalasi Requirements Aplikasi](path/to/gambar-11.png)
+<img width="940" height="286" alt="image" src="https://github.com/user-attachments/assets/ab535d59-cbf1-4297-ac15-b323263ffab2" />
 *Gambar 11: Instalasi paket uvicorn, pydantic, uvloop, dan cryptography dari requirements.txt.*
 
 **Penjelasan Gambar 11:**
@@ -174,7 +174,7 @@ Menjalankan server pengembang aplikasi secara lokal:
 
 python dev.py
 
-![Menjalankan Server Lokal Dev](path/to/gambar-12.png)
+<img width="940" height="255" alt="image" src="https://github.com/user-attachments/assets/3ae7452e-ace5-454e-987d-b42f3903f4c6" />
 *Gambar 12: Menjalankan dev server Uvicorn pada port 44777 dengan fitur reloader otomatis.*
 
 **Penjelasan Gambar 12:**
@@ -182,7 +182,7 @@ Aplikasi berjalan lokal pada `http://localhost:44777/docs/`. Server mendengarkan
 
 Menguji akses browser ke endpoint dokumentasi OpenAPI Swagger UI:
 
-![Swagger UI Dokumentasi API](path/to/gambar-13.png)
+<img width="940" height="251" alt="image" src="https://github.com/user-attachments/assets/f159b1ed-2940-4f3a-8301-836d221ec735" />
 *Gambar 13: Halaman antarmuka Swagger UI (http://localhost:44777/docs/) menampilkan endpoint GET dan POST /api/examples.*
 
 **Penjelasan Gambar 13:**
@@ -190,7 +190,7 @@ Tampilan Swagger UI memverifikasi bahwa endpoint REST API `GET /api/examples` da
 
 Menghentikan server lokal dev di terminal:
 
-![Menghentikan Dev Server](path/to/gambar-14.png)
+<img width="940" height="100" alt="image" src="https://github.com/user-attachments/assets/cc0191e8-9bc5-43e9-9e87-cf23cdfd9db7" />
 *Gambar 14: Server Uvicorn dihentikan dengan menekan tombol Ctrl+C.*
 
 **Penjelasan Gambar 14:**
@@ -204,7 +204,7 @@ Kembali ke direktori utama `workspace-05` dan memeriksa struktur folder proyek s
 cd ..
 ls -R
 
-![Pemeriksaan Struktur Direktori](path/to/gambar-15.png)
+<img width="940" height="481" alt="image" src="https://github.com/user-attachments/assets/a77de5cc-9e0f-46ac-a45c-b7a0444459ac" />
 *Gambar 15: Struktur direktori workspace-05 beserta file konfigurasi Nginx.*
 
 **Penjelasan Gambar 15:**
@@ -216,7 +216,7 @@ cat nginx/nginx.conf
 cat docker-compose.yml
 sudo docker info
 
-![Konfigurasi Nginx dan Docker Compose](path/to/gambar-16.png)
+<img width="940" height="473" alt="image" src="https://github.com/user-attachments/assets/07ee1eb5-b8ab-46a5-8ad4-c7c35ce4e3a1" />
 *Gambar 16: File konfigurasi Nginx upstream backend dan spesifikasi docker-compose.yml.*
 
 **Penjelasan Gambar 16:**
@@ -224,7 +224,7 @@ File `nginx.conf` mengonfigurasi blok `upstream backend` ke `server bs_app:80;` 
 
 Memeriksa informasi lengkap sistem Docker Engine:
 
-![Informasi Docker System Info](path/to/gambar-17.png)
+<img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/f8db4a6a-b5dc-4d60-8c28-024b9ecdb9f7" />
 *Gambar 17: Tampilan status Docker Engine, Cgroup driver, Kernel version, serta alokasi resource CPU dan Memory.*
 
 **Penjelasan Gambar 17:**
@@ -234,7 +234,7 @@ Memeriksa sintaks file konfigurasi Docker Compose menggunakan perintah validasi:
 
 sudo docker compose config
 
-![Validasi Konfigurasi Compose](path/to/gambar-18.png)
+<img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/b3b39d4c-9d21-4bfb-9bad-3716f032a9fb" />
 *Gambar 18: Output struktur konfigurasi akhir yang telah divalidasi oleh Docker Compose.*
 
 **Penjelasan Gambar 18:**
@@ -247,10 +247,11 @@ Menjalankan Docker Compose dengan memicu pembangunan image dan menduplikasi laya
 
 sudo docker compose up --build -d --scale bs_app=2
 
-![Build Image Docker Compose](path/to/gambar-19.png)
+<img width="940" height="314" alt="image" src="https://github.com/user-attachments/assets/c6af0350-ad23-407f-b8d2-45616cfe37e4" />
 *Gambar 19: Proses kompilasi dan build image Docker untuk Nginx dan aplikasi Python bs_app.*
 
-![Status Selesai Container Started](path/to/gambar-20.png)
+<img width="940" height="477" alt="image" src="https://github.com/user-attachments/assets/47dd6f45-72a5-4e25-a628-9fdf0180f3b0" />
+
 *Gambar 20: Kontainer workspace-05-bs_app-1, workspace-05-bs_app-2, dan nginx berhasil dibuat dan berjalan.*
 
 **Penjelasan Gambar 19 & 20:**
@@ -264,7 +265,7 @@ Parameter `--scale bs_app=2` berhasil menggandakan kontainer aplikasi menjadi du
 
 Menguji akses halaman Swagger UI melalui Load Balancer Nginx pada port 80 (`http://localhost/docs/`):
 
-![Verifikasi Akses Swagger UI via Nginx](path/to/gambar-21.png)
+<img width="940" height="297" alt="image" src="https://github.com/user-attachments/assets/d1ab19db-6db5-4dbf-9cff-d2720c75cb78" />
 *Gambar 21: Dokumentasi Swagger UI dapat diakses dengan sukses melalui Load Balancer Nginx.*
 
 **Penjelasan Gambar 21:**
@@ -272,7 +273,7 @@ Akses ke port 80 Nginx berhasil diteruskan secara transparan ke kontainer backen
 
 Pengujian pengiriman request API pada endpoint `POST /api/examples`:
 
-![Pengujian Request POST API](path/to/gambar-22.png)
+<img width="940" height="434" alt="image" src="https://github.com/user-attachments/assets/2af5f7f2-d7f5-441f-8c7b-ec6d15586289" />
 *Gambar 22: Pengujian request POST /api/examples menghasilkan respon status 200 OK.*
 
 **Penjelasan Gambar 22:**
@@ -283,7 +284,8 @@ Memeriksa status kontainer yang sedang berjalan dan melihat log distribusi trafi
 sudo docker ps
 sudo docker compose logs --tail=50 bs_app
 
-![Pemeriksaan Status dan Log Kontainer](path/to/gambar-23.png)
+<img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/d8666cf4-e75d-4eda-a277-471e956c1178" /><img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/76ddaca4-342f-43f7-bbfb-b6a3d482ff3e" />
+
 *Gambar 23: Tampilan kontainer aktif dan log alokasi request antara bs_app-1 dan bs_app-2.*
 
 **Penjelasan Gambar 23:**
@@ -300,7 +302,7 @@ sudo docker logs --tail 50 workspace-05-bs_app-1
 sudo docker logs --tail 50 workspace-05-bs_app-2
 sudo docker compose down
 
-![Pengujian Loop Request dan Teardown Environment](path/to/gambar-24.png)
+<img width="940" height="209" alt="image" src="https://github.com/user-attachments/assets/e54afe94-9779-4e35-96bf-fd064f28635c" /><img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/2f935302-1890-479b-966f-3c7529822afb" />
 *Gambar 24: Hasil pengujian 10 request HTTP 200 OK, pemeriksaan log pembagian beban Round-Robin, dan pembersihan lingkungan dengan docker compose down.*
 
 **Penjelasan Gambar 24:**
