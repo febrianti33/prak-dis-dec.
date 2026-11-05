@@ -273,7 +273,7 @@ Akses ke port 80 Nginx berhasil diteruskan secara transparan ke kontainer backen
 
 Pengujian pengiriman request API pada endpoint `POST /api/examples`:
 
-<img width="940" height="434" alt="image" src="https://github.com/user-attachments/assets/2af5f7f2-d7f5-441f-8c7b-ec6d15586289" />
+<img width="940" height="434" alt="image" src="https://github.com/user-attachments/assets/2af5f7f2-d7f5-441f-8c7b-ec6d15586289" /><img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/eb839d94-56b7-46a6-b3dc-09c2c8d98bf3" />
 *Gambar 22: Pengujian request POST /api/examples menghasilkan respon status 200 OK.*
 
 **Penjelasan Gambar 22:**
@@ -284,7 +284,7 @@ Memeriksa status kontainer yang sedang berjalan dan melihat log distribusi trafi
 sudo docker ps
 sudo docker compose logs --tail=50 bs_app
 
-<img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/d8666cf4-e75d-4eda-a277-471e956c1178" /><img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/76ddaca4-342f-43f7-bbfb-b6a3d482ff3e" />
+<img width="940" height="209" alt="image" src="https://github.com/user-attachments/assets/b03c2ef1-1cf5-4af3-a2f3-68a96e399919" />
 
 *Gambar 23: Tampilan kontainer aktif dan log alokasi request antara bs_app-1 dan bs_app-2.*
 
@@ -302,7 +302,7 @@ sudo docker logs --tail 50 workspace-05-bs_app-1
 sudo docker logs --tail 50 workspace-05-bs_app-2
 sudo docker compose down
 
-<img width="940" height="209" alt="image" src="https://github.com/user-attachments/assets/e54afe94-9779-4e35-96bf-fd064f28635c" /><img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/2f935302-1890-479b-966f-3c7529822afb" />
+<img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/2f935302-1890-479b-966f-3c7529822afb" />
 *Gambar 24: Hasil pengujian 10 request HTTP 200 OK, pemeriksaan log pembagian beban Round-Robin, dan pembersihan lingkungan dengan docker compose down.*
 
 **Penjelasan Gambar 24:**
