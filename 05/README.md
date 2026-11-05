@@ -2,11 +2,13 @@
 ---
 
 
- **Nama** :Maria Widya Febrianti 
-**NIM** : 255410011 
-**Kelas** : IF-1 
-**Program Studi** : Informatika (Undergraduate Student) 
-**Institusi** : Universitas Teknologi Digital Indonesia (UTDI) 
+## 👤 Identitas Pengembang
+
+* **Nama**: Maria Widya Febrianti
+* **NIM**: 255410011
+* **Kelas**: IF-1
+* **Program Studi**: Informatika
+* **Institusi**: Universitas Teknologi Digital Indonesia (UTDI)
 
 
 ---
